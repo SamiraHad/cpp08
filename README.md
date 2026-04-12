@@ -29,11 +29,17 @@ Si elle n’est pas trouvée, on lance une exception ou on retourne une valeur d
 Exemple avec un cas qui marche:
 
 std::vector<int> v; 
+
 v.push_back(3); 
+
 v.push_back(4);
+
 v.push_back(5);
+
 std::vector<int>::iterator it = easyfind(v, 5);
+
 =======>
+
 *it = 5
 
 
@@ -41,24 +47,36 @@ std::vector<int>::iterator it = easyfind(v, 5);
 Exemple avec un cas qui ne marche pas:
 
 std::vector<int> v; 
+
 v.push_back(3); 
+
 v.push_back(4);
+
 v.push_back(5);
+
 std::vector<int>::iterator it = easyfind(v, 42);
+
 =======>
+
 exception
 
 
-push_back est une fonction membre des containers STL, sert a creer un vector vide 
-et ajouter les element un par un dans le container.
+push_back est une fonction membre des containers STL, sert a creer un vector vide et ajouter les element un par un dans le container.
+
 exemple:
-    std::vector<int> v; 
-    v.push_back(3); 
-    v.push_back(4);
-    v.push_back(5);
+
+std::vector<int> v;
+
+v.push_back(3); 
+    
+v.push_back(4);
+    
+v.push_back(5);
 
 On peut aussi creer un tableau en memoire puis copier ses element dans un container.
 
 exemple:
-    int arr[] = {3, 4, 5};
-    std::vector<int> v(arr, arr + 3);
+
+  int arr[] = {3, 4, 5};
+    
+  std::vector<int> v(arr, arr + 3);
