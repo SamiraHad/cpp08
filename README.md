@@ -12,6 +12,7 @@ Un algorithme STL est une fonction générique qui travaille avec des itérateur
 
 Un itérateur est comme un pointeur qui permet de parcourir un container.
 
+
 EX00: 
 
 Dans cet exercice, on crée une fonction template easyfind qui permet de chercher une valeur dans un container.
