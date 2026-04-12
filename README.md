@@ -28,8 +28,11 @@ Si elle n’est pas trouvée, on lance une exception ou on retourne une valeur d
 
 Exemple avec un cas qui marche:
 
-std::vector<int> v = {4, 5, 3};
-auto it = easyfind(v, 5);
+std::vector<int> v; 
+v.push_back(3); 
+v.push_back(4);
+v.push_back(5);
+std::vector<int>::iterator it = easyfind(v, 5);
 =======>
 *it = 5
 
@@ -37,8 +40,11 @@ auto it = easyfind(v, 5);
 
 Exemple avec un cas qui ne marche pas:
 
-std::vector<int> v = {4, 5, 3};
-auto it = easyfind(v, 42);
+std::vector<int> v; 
+v.push_back(3); 
+v.push_back(4);
+v.push_back(5);
+std::vector<int>::iterator it = easyfind(v, 42);
 =======>
 exception
 
@@ -51,7 +57,7 @@ exemple:
     v.push_back(4);
     v.push_back(5);
 
-On peut aussi creer un tableau en memoire puis on copie les element du tableau dans le container.
+On peut aussi creer un tableau en memoire puis copier ses element dans un container.
 
 exemple:
     int arr[] = {3, 4, 5};
