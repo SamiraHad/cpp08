@@ -3,9 +3,7 @@
 La STL est une bibliothèque standard en C++ basée sur les templates. Elle contient : 
 
 * des containers → vector, list, deque, etc.
-
 * des algorithmes → find, sort, count, etc.
-
 * des itérateurs → pour parcourir les containers
   
 
@@ -24,15 +22,11 @@ Si la valeur est trouvée, la fonction retourne un itérateur vers cet élément
 Si elle n’est pas trouvée, on lance une exception ou on retourne une valeur d’erreur.
 
 
-
 Exemple avec un cas qui marche:
 
 std::vector<int> v = {4, 5, 3};
-
 auto it = easyfind(v, 5);
-
 =======>
-
 *it = 5
 
 
@@ -40,9 +34,21 @@ auto it = easyfind(v, 5);
 Exemple avec un cas qui ne marche pas:
 
 std::vector<int> v = {4, 5, 3};
-
 auto it = easyfind(v, 42);
-
 =======>
-
 exception
+
+
+push_back est une fonction membre des containers STL, sert a creer un vector vide 
+et ajouter les element un par un dans le container.
+exemple:
+    std::vector<int> v; 
+    v.push_back(3); 
+    v.push_back(4);
+    v.push_back(5);
+
+On peut aussi creer un tableau en memoire puis on copie les element du tableau dans le container.
+
+exemple:
+    int arr[] = {3, 4, 5};
+    std::vector<int> v(arr, arr + 3);
