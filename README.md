@@ -6,8 +6,9 @@ La STL est une bibliothèque standard en C++ basée sur les templates. Elle cont
 * des algorithmes → find, sort, count, etc.
 * des itérateurs → pour parcourir les containers
   
-
+Un container est une structure qui stocke des données (comme un tableau amélioré).
 Un algorithme STL est une fonction générique qui travaille avec des itérateurs.
+Un itérateur est comme un pointeur qui permet de parcourir un container.
 
 EX00: 
 
