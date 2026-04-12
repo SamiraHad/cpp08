@@ -24,7 +24,8 @@ Si la valeur est trouvée, la fonction retourne un itérateur vers cet élément
 Si elle n’est pas trouvée, on lance une exception ou on retourne une valeur d’erreur.
 
 
-Exemple qui marche:
+
+Exemple avec un cas qui marche:
 
 std::vector<int> v = {4, 5, 3};
 
@@ -36,7 +37,7 @@ auto it = easyfind(v, 5);
 
 
 
-Cas où ça ne marche pas:
+Exemple avec un cas qui ne marche pas:
 
 std::vector<int> v = {4, 5, 3};
 
