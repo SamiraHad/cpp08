@@ -61,7 +61,7 @@ std::vector<int>::iterator it = easyfind(v, 42);
 exception
 
 
-push_back est une fonction membre des containers STL, sert a creer un vector vide et ajouter les element un par un dans le container.
+push_back est une fonction membre des containers STL, sert a creer un container vide et ajouter les element un par un dedans.
 
 exemple:
 
