@@ -1,4 +1,14 @@
-
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/04/13 14:35:27 by hsamira           #+#    #+#              #
+#    Updated: 2026/04/13 15:26:26 by hsamira          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 NAME = easyfind
 
@@ -18,11 +28,12 @@ $(NAME): $(OBJ)
 %.o:%.cpp
 		$(CXX) $(CXXFLAG) -c $< -o $@
 
-clean: rm -f $(OBJ)
+clean:
+	rm -f $(OBJ)
 
 fclean: clean
-	rm - f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PONY: re all clean fclean 
+.PHONY: re all clean fclean 

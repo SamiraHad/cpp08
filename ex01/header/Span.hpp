@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 14:36:06 by hsamira           #+#    #+#             */
-/*   Updated: 2026/04/13 15:26:15 by hsamira          ###   ########.fr       */
+/*   Created: 2026/04/13 15:29:57 by hsamira           #+#    #+#             */
+/*   Updated: 2026/04/13 16:47:14 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+#ifndef SPAN_HPP
+#define SPAN_HPP
 
 #include <iostream>
+#include <vector>
 #include <algorithm>
-#include <exception>
 
-template <typename T>
-typename T::iterator easyfind (T& container, int value)
+class Span
 {
-    typename T::iterator it = std::find(container.begin(), container.end(), value);
+    private:
+        unsigned int _N;
+        std::vector<unsigned int> _Numbers
 
-    if(it == container.end())
-        throw std::exception();
-    return it;
-}
+    public:
+        Span();
+        Span(unsigned int N);
+        Span(const Span& other);
+        Span& operator=( const Span& other);
+        ~Span();
+        void addNumber(unsigned int n);
+        unsigned int shortestSpan() const;
+        unsigned int longestSpan() const;
+        
+};
 
 #endif

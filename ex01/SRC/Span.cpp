@@ -1,31 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 14:36:06 by hsamira           #+#    #+#             */
-/*   Updated: 2026/04/13 15:26:15 by hsamira          ###   ########.fr       */
+/*   Created: 2026/04/13 15:30:57 by hsamira           #+#    #+#             */
+/*   Updated: 2026/04/13 15:30:58 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
-
-#include <iostream>
-#include <algorithm>
-#include <exception>
-
-template <typename T>
-typename T::iterator easyfind (T& container, int value)
-{
-    typename T::iterator it = std::find(container.begin(), container.end(), value);
-
-    if(it == container.end())
-        throw std::exception();
-    return it;
-}
-
-#endif
