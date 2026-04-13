@@ -28,9 +28,9 @@ Si elle n’est pas trouvée, on lance une exception ou on retourne une valeur d
 
 Exemple avec un cas qui marche:
 
-std::vector<int> v; 
+std::vector<int> v;  //creer un container vide
 
-v.push_back(3); 
+v.push_back(3);    //ajouter element par element
 
 v.push_back(4);
 
@@ -61,7 +61,7 @@ std::vector<int>::iterator it = easyfind(v, 42);
 exception
 
 
-push_back est une fonction membre des containers STL, sert a creer un container vide et ajouter les element un par un dedans.
+push_back est une fonction membre des containers STL qui permet d’ajouter un élément à la fin du container.
 
 exemple:
 
