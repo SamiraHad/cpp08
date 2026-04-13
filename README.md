@@ -12,6 +12,69 @@ Un algorithme STL est une fonction générique qui travaille avec des itérateur
 
 Un itérateur est comme un pointeur qui permet de parcourir un container.
 
+1. vector (tableau simple)
+
+👉 le plus utilisé (90% du temps)
+
+✔️ À utiliser quand :
+tu lis souvent les données
+tu veux accéder avec un index (v[0])
+tu ajoutes surtout à la fin
+
+👉 exemple :
+
+std::vector<int> v;
+
+v.push_back(1);
+
+v.push_back(2);
+
+👉 💬 à dire : 
+
+j’utilise vector quand j’ai besoin d’un tableau rapide et simple
+
+
+
+2. list (modifications fréquentes)
+
+👉 quand tu modifies beaucoup
+
+✔️ À utiliser quand :
+tu ajoutes/supprimes souvent au milieu
+tu ne fais pas d’accès par index
+
+👉 exemple :
+std::list<int> l;
+
+l.push_back(1);
+
+l.push_back(2);
+
+👉 💬 à dire : 
+
+j’utilise list quand je fais beaucoup d’insertions et suppressions
+
+
+3. deque (ajout début + fin)
+
+👉 quand tu veux ajouter au début ET à la fin
+
+✔️ À utiliser quand :
+tu ajoutes au début (push_front)
+tu ajoutes à la fin (push_back)
+tu veux accès rapide comme vector
+
+👉 exemple :
+
+std::deque<int> d;
+
+d.push_front(1);
+
+d.push_back(2);
+
+👉 💬 à dire : 
+
+j’utilise deque quand j’ai besoin d’ajouter des éléments aux deux extrémités
 
 EX00: 
 
