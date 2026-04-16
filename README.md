@@ -12,6 +12,13 @@ Un algorithme STL est une fonction générique qui travaille avec des itérateur
 
 Un itérateur est comme un pointeur qui permet de parcourir un container.
 
+
+*En C++98, la bibliothèque standard (STL) distingue bien deux grandes catégories de conteneurs :
+
+Des conteneurs séquentiels et des Conteneurs associatifs. 
+
+<img width="498" height="350" alt="image" src="https://github.com/user-attachments/assets/93e1973a-0a13-427c-932b-e7fb29cf0146" /> .
+
 1. vector (tableau simple)
 
 👉 le plus utilisé (90% du temps)
