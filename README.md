@@ -95,7 +95,7 @@ Si la valeur est trouvée, la fonction retourne un itérateur vers cet élément
 
 Si elle n’est pas trouvée, on lance une exception ou on retourne une valeur d’erreur.
 
-On utilise des containers sequentiels pas des containers associatif.
+On utilise des containers sequentiels pas des containers associatifs.
 
 Un container séquentiel stocke les éléments dans l’ordre où tu les ajoutes.
 
