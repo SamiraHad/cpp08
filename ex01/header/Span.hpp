@@ -21,7 +21,7 @@ class Span
 {
     private:
         unsigned int _N;
-        std::vector<unsigned int> _Numbers
+        std::vector<unsigned int> _Numbers;
 
     public:
         Span();
