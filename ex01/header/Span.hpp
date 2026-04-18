@@ -28,8 +28,8 @@
 class Span
 {
     private:
-        unsigned int _n;
-        std::vector<int> _numbers //car on peut avoir un resultat negatif : 3 - 5 = -2
+        unsigned int _n;  //Le nombre total (capacité)  : taille max 
+        std::vector<int> _numbers; //Les valeurs stockées : positifs ou negatifs
 
     public:
         Span();
@@ -37,10 +37,19 @@ class Span
         Span(const Span& other);
         Span& operator=( const Span& other);
         ~Span();
-        void addNumber(unsigned int n);
+        void addNumber(int n);
         unsigned int shortestSpan() const;
         unsigned int longestSpan() const;
-        
+
+        template<typename Iterator>
+        void addRange(Iterator begin, Iterator end)
+        {
+            while (begin != end)
+            {
+                addNumber(*begin);
+                ++begin;
+            }
+        }
 };
 
 #endif
