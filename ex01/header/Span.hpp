@@ -20,7 +20,8 @@
 
 //_N = 5                  (capacité max)
 //_number = [6, -3]      (valeurs stockées)
-//_number.size() = 2     (nombre actuel d’éléments)class Span
+//_number.size() = 2     (nombre actuel d’éléments)
+class Span
 {
     private:
         unsigned int _N;  //Combien d’éléments je peux stocker au maximum  : taille max 
