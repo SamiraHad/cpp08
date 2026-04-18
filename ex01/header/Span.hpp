@@ -16,30 +16,25 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
-#ifndef SPAN_HPP
-#define SPAN_HPP
-
-#include <iostream>
-#include <vector>
-#include <algorithm>
 #include <exception>
 
-class Span
+//_N = 5                  (capacité max)
+//_number = [6, -3]      (valeurs stockées)
+//_number.size() = 2     (nombre actuel d’éléments)class Span
 {
     private:
-        unsigned int _n;  //Le nombre total (capacité)  : taille max 
-        std::vector<int> _numbers; //Les valeurs stockées : positifs ou negatifs
+        unsigned int _N;  //Combien d’éléments je peux stocker au maximum  : taille max 
+        std::vector<int> _number; //Les valeurs stockées : positifs ou negatifs
 
     public:
         Span();
-        Span(unsigned int n);
+        Span(unsigned int N);
         Span(const Span& other);
         Span& operator=( const Span& other);
         ~Span();
-        void addNumber(int n);
-        unsigned int shortestSpan() const;
-        unsigned int longestSpan() const;
+        void addNumber(int number);
+        unsigned int shortestSpan() const; //trie + voisins
+        unsigned int longestSpan() const; //max - min
 
         template<typename Iterator>
         void addRange(Iterator begin, Iterator end)
