@@ -17,15 +17,23 @@
 #include <vector>
 #include <algorithm>
 
+#ifndef SPAN_HPP
+#define SPAN_HPP
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <exception>
+
 class Span
 {
     private:
-        unsigned int _N;
-        std::vector<unsigned int> _Numbers;
+        unsigned int _n;
+        std::vector<int> _numbers //car on peut avoir un resultat negatif : 3 - 5 = -2
 
     public:
         Span();
-        Span(unsigned int N);
+        Span(unsigned int n);
         Span(const Span& other);
         Span& operator=( const Span& other);
         ~Span();
@@ -36,3 +44,4 @@ class Span
 };
 
 #endif
+
