@@ -25,7 +25,7 @@ class Span
 {
     private:
         unsigned int _N;  //Combien d’éléments je peux stocker au maximum  : taille max 
-        std::vector<int> _number; //Les valeurs stockées : positifs ou negatifs
+        std::vector<int> _numbers; //Les valeurs stockées : positifs ou negatifs
 
     public:
         Span();
