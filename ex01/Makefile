@@ -6,7 +6,7 @@
 #    By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/13 15:30:07 by hsamira           #+#    #+#              #
-#    Updated: 2026/04/13 15:54:52 by hsamira          ###   ########.fr        #
+#    Updated: 2026/04/19 16:38:47 by hsamira          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,22 +16,22 @@ CXX = c++
 
 CXXFLAG = -Wall -Wextra -Werror -std=c++98 -Iheader
 
-SRC = SRC/main.cpp SRC/Span.cpp
+SRC = SRC/main.cpp  SRC/Span.cpp
 
-OBJ = $(SRC:.cpp:.o)
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME): $(OBJ)
 	$(CXX) $(CXXFLAG) $(OBJ) -o $(NAME)
 
 %.o:%.cpp
 	$(CXX) $(CXXFLAG) -c $< -o $@
 
-clean :
+clean:
 	rm -f $(OBJ)
 
-fcleaan : clean
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
