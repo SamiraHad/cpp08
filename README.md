@@ -154,3 +154,20 @@ exemple:
   int arr[] = {3, 4, 5};
     
   std::vector<int> v(arr, arr + 3);
+
+
+  EX01 — Span
+
+Dans cet exercice, on cree une classe Span qui permet de stocker un nombre limite d’entiers. La capacite maximale est definie au moment de la creation de l’objet, et on ne peut pas depasser cette limite.
+
+Les valeurs sont stockees dans un std::vector, ce qui permet d’ajouter facilement des elements avec push_back et d’utiliser les algorithmes de la STL.
+
+La fonction addNumber permet d’ajouter un element dans le container. Si la capacite maximale est atteinte, une exception est lancée. On peut aussi ajouter plusieurs elements d’un coup avec addRange, en utilisant des iterateurs.
+
+La fonction shortestSpan calcule la plus petite difference entre deux nombres. Pour cela, on copie le vector, on le trie avec std::sort, puis on compare les elements voisins pour trouver la plus petite distance.
+
+La fonction longestSpan calcule la plus grande difference entre deux valeurs. On utilise std::min_element et std::max_element, puis on fait simplement la difference entre le maximum et le minimum.
+
+On gere les erreurs en lançant une exception si on essaie de calculer un span avec moins de deux elements.
+
+Cet exercice permet de pratiquer l’utilisation des containers STL, des iterateurs et des algorithmes, tout en apprenant a gerer les exceptions et les cas limites.
