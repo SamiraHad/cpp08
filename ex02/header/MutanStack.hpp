@@ -14,6 +14,7 @@
 #define MUTANSTACK_HPP
 
 #include <stack>
+#include <iostream>
 
 template «typename T>
 class MutanStack : public std::stack<T>
