@@ -254,6 +254,54 @@ Pour tester les autres conteneurs :
 | `begin()` pointe sur le premier élément                  | `begin()`      | `begin()`      | `begin()`      |
 | `end()`   pointe après le dernier (fin pour boucle)      | `end()`        | `end()`        | `end()`        |
 
+🎤 Question 1 👉 C’est quoi un container adapter ?
+
+Un container adapter est une structure qui utilise un conteneur interne mais expose une interface différente.
+
+
+🎤 Question 2 👉 Pourquoi std::stack n’expose pas d’itérateurs ?
+
+std::stack n’a pas d’itérateurs pour imposer un accès LIFO strict et empêcher l’accès aux éléments internes.
+
+
+🎤 Question 3 👉 Explique rapidement MutantStack
+
+MutantStack hérite de std::stack et ajoute des itérateurs pour parcourir les éléments via le conteneur interne.
+
+
+🎤 Question 4 👉 À quoi sert this->c ?
+
+this->c permet d’accéder au conteneur interne protégé (par défaut deque) de std::stack.
+
+
+🎤 Question 5 👉 Pourquoi ton test avec std::list donne le même résultat ?
+
+Parce que j’utilise push_back, pop_back et back pour reproduire le comportement LIFO.
+
+
+🎤 Question 6 (piège) 👉 Pourquoi std::deque est utilisé par défaut dans std::stack ?
+
+Parce que deque est un bon compromis entre vector et list (rapide en insertion/suppression et accès).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
