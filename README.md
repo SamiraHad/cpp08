@@ -245,14 +245,14 @@ Le but de MutantStack est :
 
 Pour tester les autres conteneurs :
 
-| MutantStack / stack | `std::list`    | `std::vector`  | `std::deque`   |
-| ------------------- | -------------- | -------------- | -------------- |
-| `push(x)`           | `push_back(x)` | `push_back(x)` | `push_back(x)` |
-| `pop()`             | `pop_back()`   | `pop_back()`   | `pop_back()`   |
-| `top()`             | `back()`       | `back()`       | `back()`       |
-| `size()`            | `size()`       | `size()`       | `size()`       |
-| `begin()`           | `begin()`      | `begin()`      | `begin()`      |
-| `end()`             | `end()`        | `end()`        | `end()`        |
+|                 MutantStack / stack                      | `std::list`    | `std::vector`  | `std::deque`   |
+| -------------------------------------------------------- | -------------- | -------------- | -------------- |
+| `push(x)`ajoute un élément à la fin (en haut de la pile) | `push_back(x)` | `push_back(x)` | `push_back(x)` |
+| `pop()`enlève le dernier élément (le sommet)             | `pop_back()`   | `pop_back()`   | `pop_back()`   |
+| `top()` regarde le dernier élément sans le supprimer     | `back()`       | `back()`       | `back()`       |
+| `size()` donne le nombre d’éléments                      | `size()`       | `size()`       | `size()`       |
+| `begin()` pointe sur le premier élément                  | `begin()`      | `begin()`      | `begin()`      |
+| `end()`   pointe après le dernier (fin pour boucle)      | `end()`        | `end()`        | `end()`        |
 
 
 
