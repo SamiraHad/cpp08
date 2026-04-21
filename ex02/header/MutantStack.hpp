@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MutanStack.hpp                                     :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/19 16:41:09 by hsamira           #+#    #+#             */
-/*   Updated: 2026/04/19 16:43:49 by hsamira          ###   ########.fr       */
+/*   Created: 2026/04/21 11:01:52 by hsamira           #+#    #+#             */
+/*   Updated: 2026/04/21 11:07:59 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MUTANSTACK_HPP
-#define MUTANSTACK_HPP
+
+
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
 
 #include <stack>
 #include <iostream>
 
-template «typename T>
-class MutanStack : public std::stack<T>
+template <typename T>
+class MutantStack : public std::stack<T>
 {
   public:
-    MutanStack();
-    MutanStack(const MutanStack& other);
-    MutanStack& operator=(const MutanStack& other);
-    ~MutanStack();
+    MutantStack();
+    MutantStack(const MutantStack& other);
+    MutantStack& operator=(const MutantStack& other);
+    ~MutantStack();
 
     typedef typename std::stack<T>::container_type::iterator iterator;
     iterator begin();
@@ -32,30 +34,30 @@ class MutanStack : public std::stack<T>
 };
 
 template <typename T>
-MutanStack<T>::MutanStack() : std::stack<T>() {}
+MutantStack<T>::MutantStack() : std::stack<T>() {}
 
 template <typename T>
-MutanStack<T>::MutanStack(const MutanStack& other) : std::stack<T>(other) {}
+MutantStack<T>::MutantStack(const MutantStack& other) : std::stack<T>(other) {}
 
 template <typename T>
-MutanStack<T>& MutanStack<T>::operator=(const MutanStack& other)
+MutantStack<T>& MutantStack<T>::operator=(const MutantStack& other)
 {
-  if(this != &other}
-    *this = opther;
+  if(this != &other)
+    std::stack<T>::operator=(other);
   return *this;
 }
 
 template <typename T>
-MutanStack<T>::~MutanStack() {}
+MutantStack<T>::~MutantStack() {}
 
 template <typename T>
-typename MutanStack<T>::iterator MutanStack<T>::begin()
+typename MutantStack<T>::iterator MutantStack<T>::begin()
 {
   return this->c.begin();
 }
 
-template «typename T>
-typename MutanStack<T>::iterator MutanStack<T>::end()
+template <typename T>
+typename MutantStack<T>::iterator MutantStack<T>::end()
 {
   return this->c.end();
 }
