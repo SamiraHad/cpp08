@@ -180,22 +180,31 @@ MutantStack = une stack + la possibilité de la parcourir comme un conteneur
 ✅ 1. Héritage de std::stack
 
 Dans cet exercice, on cree une classe MutantStack qui:
+
   *hérite de std::stack
+  
   *récupère toutes ses fonctions (push, pop, top, etc.) 
 
   template <typename T>
+  
   class MutantStack : public std::stack<T>
 
 ✅ 2. std::stack est un adaptateur de conteneur
 
 std::stack n’est pas un vrai conteneur. C’est un adaptateur de conteneur.
-    *Il utilise un vrai conteneur en interne 
-    *mais il cache son interface
+
+   *Il utilise un vrai conteneur en interne 
+   
+   *mais il cache son interface
+   
 👉 Par défaut, il utilise :
+
   *std::deque
 
 Mais il peut aussi utiliser :
+
   *std::vector
+  
   *std::list
 
 ✅ 3. Pourquoi std::stack n’a PAS d’itérateurs ?
@@ -205,16 +214,21 @@ std::stack est volontairement limitée.
 Elle ne donne accès qu’à :
 
 -push (ajouter en haut)
+
 -pop (retirer en haut)
+
 -top (voir le haut)
 
 ❌ interdit de :
+
   parcourir la pile
+  
   accéder à un élément au milieu
 
 👉 Elle cache volontairement :
 
 les itérateurs
+
 l’accès interne
 
 C’est pour imposer le comportement LIFO strict (LIFO = Last In, First Out)
@@ -223,7 +237,9 @@ C’est pour imposer le comportement LIFO strict (LIFO = Last In, First Out)
 ✅4. Le but de MutantStack
 
 Le but de MutantStack est :
+
   *garder le comportement de pile
+  
   *ajouter la possibilité de parcourir les éléments c a dire des itérateurs (begin, end)
 
 
