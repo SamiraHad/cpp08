@@ -243,14 +243,18 @@ Le but de MutantStack est :
   *ajouter la possibilité de parcourir les éléments c a dire des itérateurs (begin, end)
 
 
-Pour tester std::list :
+Pour tester les autres conteneurs :
 
-| MutantStack / stack | std::list équivalent |
-| ------------------- | -------------------- |
-| `push(x)`           | `push_back(x)`       |
-| `pop()`             | `pop_back()`         |
-| `top()`             | `back()`             |
-| `size()`            | `size()` (pareil)    |
+| MutantStack / stack | `std::list`    | `std::vector`  | `std::deque`   |
+| ------------------- | -------------- | -------------- | -------------- |
+| `push(x)`           | `push_back(x)` | `push_back(x)` | `push_back(x)` |
+| `pop()`             | `pop_back()`   | `pop_back()`   | `pop_back()`   |
+| `top()`             | `back()`       | `back()`       | `back()`       |
+| `size()`            | `size()`       | `size()`       | `size()`       |
+| `begin()`           | `begin()`      | `begin()`      | `begin()`      |
+| `end()`             | `end()`        | `end()`        | `end()`        |
+
+
 
 
 
