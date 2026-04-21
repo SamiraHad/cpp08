@@ -297,8 +297,9 @@ template <class T, class Container = std::deque<T> >
 class stack
 
 {
-	public:
-		typedef Container container_type;
+
+ public:
+	typedef Container container_type;
 
   protected:
 	container_type c;
