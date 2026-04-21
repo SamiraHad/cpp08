@@ -288,6 +288,16 @@ Parce que deque est un bon compromis entre vector et list (rapide en insertion/s
 
 std::stack cache les itérateurs pour respecter l’encapsulation et le LIFO, mais laisse l’accès au conteneur interne aux classes dérivées via protected, ce qui permet à MutantStack d’exposer les itérateurs.
 
+template <class T, class Container = std::deque<T> >
+class stack
+{
+	public:
+		typedef Container container_type;
+
+  protected:
+		container_type c;
+};
+
 
 
 
