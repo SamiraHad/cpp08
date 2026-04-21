@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 14:35:44 by hsamira           #+#    #+#             */
-/*   Updated: 2026/04/13 15:26:20 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/04/21 17:11:48 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,15 @@ int main()
    std::cout << "\nTest avec les vecteurs " << std::endl;
    
    std::vector<int> v; 
-   v.push_back(3); 
+   v.push_back(4); 
    v.push_back(4);
-   v.push_back(5);
+   v.push_back(6);
 
    try
    {
         std::vector<int>::iterator it = easyfind(v, 4);
-        std::cout << "Found in vector: " << *it << std::endl;
+        int index = std::distance(v.begin(), it);
+        std::cout << "Found in vector: " << *it << " in index: " << index << std::endl;
    }
    catch (std::exception& e)
    {
@@ -55,7 +56,9 @@ int main()
    try
    {
         std::vector<int>::iterator it = easyfind(v, 50);
-        std::cout << "Found in vector: " << *it << std::endl;
+        int index1 = std::distance(v.begin(), it);
+        std::cout << "Found in vector: " << *it << " in index: " << index1 << std::endl;
+        
    }
    catch (std::exception& e)
    {
@@ -72,7 +75,8 @@ int main()
    try
    {
         std::list<int>::iterator it = easyfind(l, 35);
-        std::cout << "Found in list: " << *it << std::endl;
+        int index2 = std::distance(l.begin(), it);
+        std::cout << "Found in list: " << *it << " in index " << index2 << std::endl;
    }
    catch(std::exception& e)
    {
@@ -82,7 +86,8 @@ int main()
    try
    {
         std::list<int>::iterator it = easyfind(l, 60);
-        std::cout << "Found in list: " << *it << std::endl;
+         int index3 = std::distance(l.begin(), it);
+        std::cout << "Found in list: " << *it << " in index" << index3 <<std::endl;
    }
    catch (std::exception& e)
    {
@@ -92,14 +97,15 @@ int main()
    std::cout << "\nTest avec les deque " << std::endl;
 
    std::deque<int> d;
-   d.push_back(31);
+   d.push_back(61);
    d.push_back(41);
-   d.push_back(51);
+   d.push_back(31);
 
    try
    {
         std::deque<int>::iterator it = easyfind(d, 31);
-        std::cout << "Found in deque: " << *it << std::endl;
+        int index4 = std::distance(d.begin(), it);
+        std::cout << "Found in deque: " << *it << " in index " << index4 <<  std::endl;
    }
    catch (std::exception& e)
    {
@@ -109,7 +115,8 @@ int main()
    try
    {
         std::deque<int>::iterator it = easyfind(d, 50);
-        std::cout << "Found in deque: " << *it << std::endl;
+        int index5 = std::distance(d.begin(), it);
+        std::cout << "Found in deque: " << *it << " in index " << index5 <<  std::endl;
    }
    catch (std::exception& e)
    {

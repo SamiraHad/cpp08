@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 14:36:06 by hsamira           #+#    #+#             */
-/*   Updated: 2026/04/13 15:26:15 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/04/21 17:14:24 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,20 @@
 #include <iostream>
 #include <algorithm>
 #include <exception>
+
+/* std::find retourne la première occurrence de la valeur recherchée.
+
+template <typename InputIt, typename T>
+InputIt find(InputIt first, InputIt last, const T& value)
+{
+    while (first != last)
+    {
+        if (*first == value)
+            return first;
+        ++first;
+    }
+    return last; //pas trouve
+}*/
 
 template <typename T>
 typename T::iterator easyfind (T& container, int value)
