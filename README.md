@@ -17,7 +17,7 @@ Un itérateur est comme un pointeur qui permet de parcourir un container.
 
 Des conteneurs séquentiels et des Conteneurs associatifs. 
 
-<img width="498" height="350" alt="image" src="https://github.com/user-attachments/assets/93e1973a-0a13-427c-932b-e7fb29cf0146" /> .
+<img width="498" height="350" alt="image" src="https://github.com/user-attachments/assets/93e1973a-0a13-427c-932b-e7fb29cf0146" /> 
 
 Dans ce modude, on vas etudier les conteneurs séquentiels.
 
