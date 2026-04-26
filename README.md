@@ -93,17 +93,7 @@ EX00:
 
 Dans cet exercice, on crée une fonction template easyfind qui permet de chercher une valeur dans un container.
 
-Elle prend en paramètre un container d’entiers et une valeur à rechercher.
-
-On utilise l’algorithme std::find de la STL pour faire la recherche, au lieu d’une boucle.
-
-Si la valeur est trouvée, la fonction retourne un itérateur vers cet élément.
-
-Si elle n’est pas trouvée, on lance une exception ou on retourne une valeur d’erreur.
-
-On utilise des containers sequentiels pas des containers associatifs.
-
-Un container séquentiel stocke les éléments dans l’ordre où tu les ajoutes.
+Elle cherche la première occurrence d’un entier dans un conteneur générique et retourne un itérateur vers cet élément. Si l’élément n’est pas trouvé, elle lance une exception.
 
 
 Exemple avec un cas qui marche:
