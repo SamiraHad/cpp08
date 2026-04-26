@@ -23,9 +23,7 @@ Dans ce modude, on vas etudier les conteneurs séquentiels.
 
 🔹 Qu’est-ce qu’un conteneur séquentiel ?
 
-Un conteneur séquentiel est une structure de données qui stocke des éléments dans un ordre linéaire,
-
-où chaque élément a une position bien définie.
+Un conteneur séquentiel est une structure de données qui stocke des éléments dans un ordre linéaire, où chaque élément a une position bien définie.
 
 1. vector (tableau simple)
 
